@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demoapi
-        image: <imageName_in_acr>
+        image: __ACR__/demoapi:latest
         imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
