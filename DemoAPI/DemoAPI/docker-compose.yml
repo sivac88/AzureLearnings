@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   demoapi:
-    image: demoapi:v3
+    image: demoapi:latest
     build:
       context: .
       dockerfile: Dockerfile
