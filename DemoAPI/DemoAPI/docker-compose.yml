@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  demoapi:
+    image: demoapi:v3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - 'ConnectionStrings:sqldb=<AzureSQLConnectionString>'
+    ports:
+      - "5000:80"

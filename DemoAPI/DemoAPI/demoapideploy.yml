@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoapi-deployment
+  labels:
+    app: demoapi
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: demoapi
+      labels:
+        app: demoapi
+    spec:
+      containers:
+      - name: demoapi
+        image: <imageName_in_acr>
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: demoapi
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demoapi-service
+spec:
+  selector:
+    app: demoapi
+  ports:
+    - port: 80
+  type: LoadBalancer
+  
+  
