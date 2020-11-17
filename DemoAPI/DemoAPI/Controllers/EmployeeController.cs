@@ -22,7 +22,8 @@ namespace DemoAPI.Controllers
             {
                 Name = employees[index],
                 Designation = (index % 2 == 0) ? "Level1" : "Level2",
-                PhoneNumber = (index % 2 != 0) ? "123" : "567"
+                PhoneNumber = (index % 2 != 0) ? "123" : "567",
+                TestColumn = "dummy"
             }).ToArray();
         }
     }

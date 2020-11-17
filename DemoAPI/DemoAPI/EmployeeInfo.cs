@@ -12,5 +12,7 @@ namespace DemoAPI
         public string Designation { get; set; }
 
         public string PhoneNumber { get; set; }
+
+        public string TestColumn { get; set; }
     }
 }
