@@ -8,6 +8,6 @@ services:
       dockerfile: Dockerfile
     restart: always
     environment:
-      - 'ConnectionStrings:sqldb=_AzureSQLConnectionStringEnvValueDocker_'
+      - 'ConnectionStrings:sqldb=__AzureSQLConnectionStringEnvValueDocker__'
     ports:
       - "5000:80"
